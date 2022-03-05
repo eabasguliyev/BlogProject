@@ -7,6 +7,8 @@ namespace Blog.Repositories.Abstracts
 {
     public interface IUnitOfWork
     {
+        public IBlogRepository BlogRepository { get; }
+        public IUserRepository UserRepository { get; }
         void Save();
     }
 }

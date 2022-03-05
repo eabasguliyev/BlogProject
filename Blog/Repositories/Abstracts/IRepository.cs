@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Repositories.Abstracts
 {
-    public interface IRepository<T> where T : IEntity
+    public interface IRepository<T> where T : class, IEntity
     {
         T Find(int id, string? includeProperties = null);
         T GetFirstOrDefault(Expression<Func<T, bool>> expression, string? includeProperties = null);

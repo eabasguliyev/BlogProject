@@ -1,5 +1,8 @@
-﻿using Blog.Entities;
+﻿using Blog.Context.Data;
+using Blog.Entities;
+using Blog.Extensions;
 using Blog.Repositories.Abstracts;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : IEntity
+    public class Repository<T> : IRepository<T> where T : class, IEntity
     {
         private readonly ApplicationDbContext _dbContext;
         protected DbSet<T> _dbSet;

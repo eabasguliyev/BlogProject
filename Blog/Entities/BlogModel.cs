@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Entities
 {
-    public class Blog : IEntity
+    public class BlogModel : IEntity
     {
         public int Id { get; set; }
         public string Title { get; set; }

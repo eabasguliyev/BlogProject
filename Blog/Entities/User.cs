@@ -11,6 +11,6 @@ namespace Blog.Entities
         public string Username { get; set; }
         public string Password { get; set; }
         public DateTime CreatedTime { get; set; }
-        public IEnumerable<Blog> Blogs { get; set; }
+        public IEnumerable<BlogModel> Blogs { get; set; }
     }
 }
